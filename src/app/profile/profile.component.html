@@ -1,0 +1,17 @@
+<main>
+    <div class="profile" *ngIf="isLogged">
+        <div class="profile1">
+            <h2>{{currentUser.name + " " + currentUser.surname}}</h2>
+        </div>
+        <div class="profile2">
+            <div>
+                <h3>Name: {{currentUser.name}}</h3>
+                <h3>Surname: {{currentUser.surname}}</h3>
+                <h3>Age: {{currentUser.age}}</h3>
+                <h3>Phone number: {{currentUser.phonenumber}}</h3>
+                <h3>Email: {{currentUser.email}}</h3>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!isLogged" class="ntl">Need to login</div>
+</main>

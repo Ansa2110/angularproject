@@ -1,0 +1,19 @@
+<div class="bodyauth">
+    <div class="container">
+        <h2>Register form</h2>
+        <form [formGroup]="myForm" class="form" (submit)="onRegister()">
+            <div class="inputs">
+                <input type="text" placeholder="Name" formControlName="name">
+                <input type="text" placeholder="Surname" formControlName="surname">
+                <input type="text" placeholder="Login" formControlName="login">
+                <input type="password" placeholder="Password" formControlName="password">
+                <input type="text" placeholder="Age" formControlName="age">
+                <input type="text" placeholder="Phonenumber" formControlName="phonenumber">
+                <input type="text" placeholder="Email" formControlName="email">
+            </div>
+            <button type="submit" [disabled]="!myForm.valid">Register</button>
+            <a [routerLink]="['/login']">Have an account? Log in</a>
+            <p *ngIf="isRegistered" [style.color]="'green'">You are successfully registered</p>
+        </form>
+    </div>
+</div>

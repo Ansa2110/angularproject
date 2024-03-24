@@ -1,0 +1,39 @@
+<main>
+  <div class="filters">
+    <label>Type: </label>
+    <select [(ngModel)]="selectedType">
+        <option value="">All</option>
+        <option *ngFor="let type of eventTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+  <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+  <div class="catalog">
+    <div class="eventsblock" *ngFor="let event of filteredEvents">
+      <div class="event-card">
+        <div class="event-image">
+          <img [src]="event.photourl" alt="Event Image"/>
+        </div>
+        <div class="event-details">
+          <h2>{{ event.name }}</h2>
+          <p class="event-description">{{ event.description }}</p>
+          <div class="event-meta">
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            <p><strong>Date:</strong> {{ event.date}}</p>
+            <p><strong>Deadline:</strong> {{ event.deadline}}</p>
+            <p><strong>Type:</strong> {{event.type}}</p>
+          </div>
+        </div>
+        <div class="btn">
+          <button (click)="apply(event)" [disabled]="(event | resultType:appliedUser) === 'Under consideration' || (event | resultType:appliedUser) === 'Deny' || (event | resultType:appliedUser) === 'Application passed' || !appliedUser ">
+            <strong>Apply to Participate</strong>
+          </button>
+          <p [style.margin-top]="'20px'"[ngClass]="{
+            'btn-gray': (event | resultType: appliedUser) === 'Under consideration',
+            'btn-red': (event | resultType: appliedUser) === 'Deny',
+            'btn-green': (event | resultType: appliedUser) === 'Application passed'
+          }"><strong>{{ (event | resultType:appliedUser)}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

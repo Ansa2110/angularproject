@@ -1,0 +1,45 @@
+<main>
+    <div class="form-container">
+        <p class="form-title"><strong>Application for creating a startup event</strong></p>
+        <form [formGroup]="eventForm" class="event-form" (submit)="addEvent()">
+            <div class="form-group">
+                <label class="form-label">Event name:</label>
+                <input type="text" formControlName="eventname" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">The date of the:</label>
+                <input type="date" formControlName="date" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Location:</label>
+                <input type="text" formControlName="location" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Description:</label>
+                <textarea formControlName="description" class="form-textarea"></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Event type:</label>
+                <select formControlName="typeevent" class="form-select">
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Pitch">Pitch</option>
+                    <option value="Expo">Expo</option>
+                    <option value="Contest">Contest</option>
+                    <option value="Bootcamp">Bootcamp</option>
+                    <option value="Conference">Conference</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Application deadline:</label>
+                <input type="date" formControlName="deadline" class="form-input">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Image URL:</label>
+                <input type="url" formControlName="photourl" class="form-input">
+            </div>
+            <button type="submit" class="form-submit" [disabled]="!eventForm.valid || !Logged">Send</button>
+        </form>
+        <p [style.color]="'green'" *ngIf="isApplied" [style.text-align]="'center'"><strong>You have successfully submitted your application!</strong></p>
+        <p [style.text-align]="'center'" [style.color]="'red'" *ngIf="!Logged">Need lo login</p>
+    </div>
+</main>

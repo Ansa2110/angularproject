@@ -1,0 +1,72 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.filters {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.event-card {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 20px 0px;
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.event-details {
+  padding: 20px;
+}
+
+.event-details h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  margin-bottom: 15px;
+}
+
+.event-meta p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.btn button {
+  padding: 5px;
+}
+
+.btn-red {
+  color: red;
+}
+
+.btn-green {
+  color: green;
+}
+
+.btn-gray {
+  color: gray;
+}
+
+.btn {
+  text-align: center;
+}
+.loading-indicator {
+  text-align: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,32 @@
+footer
+{
+    height: 150px;
+    background-color:#12192c;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.links
+{
+    display: flex;
+    flex-direction: column;
+}
+.links a
+{
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 15px;
+}
+.icons
+{
+    margin-left: 10px;
+    font-size: 18px;
+}

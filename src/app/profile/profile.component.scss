@@ -1,0 +1,40 @@
+main
+{
+    height: 700px;
+    padding-top: 50px;
+}
+.profile
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    width: 700px;
+    padding-bottom: 70px;
+    color:white;
+    background-color: rgb(18, 25, 44);
+    margin-left: 50px;
+}
+.profile1 img
+{
+    width: 200px;
+    height: 180px;
+    border-radius: 100%;
+
+}
+.profile1
+{
+  text-align: center;
+
+
+}
+.profile2
+{
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.ntl
+{
+  text-align: center;
+  font-size: 25px;
+}

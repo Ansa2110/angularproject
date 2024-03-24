@@ -1,0 +1,72 @@
+.bodyauth
+{
+    background: #00C9A7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 0;
+}
+.container
+{
+    background-color: #12192c;
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.container button
+{
+    width: 200px;
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: none;
+    background-color:#00C9A7;
+    color: white;
+}
+.container button:disabled
+{
+    background-color: gray;
+    cursor: not-allowed;
+}
+.container h2
+{
+    color: white;
+    position: relative;
+    bottom: 20px;
+}
+.container a
+{
+    color: white;
+    font-size: 13px;
+    margin-top: 10px;
+}
+input
+{
+    margin-top: 15px;
+    border-radius: 2px;
+    border: none;
+    height: 25px;
+    width: 200px;
+    text-indent: 5px;
+}
+.inputs
+{
+    width: 68%;
+}
+.invalid
+{
+    color: red;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

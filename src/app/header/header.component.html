@@ -1,0 +1,15 @@
+<header>
+    <div class="logo">
+        <h2>Startups</h2>
+    </div>
+    <nav>
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/startupevents']">Startup events</a>
+        <a [routerLink]="['/suggestedeventform']">Suggest your event</a>
+    </nav>
+    <div class="profile">
+        <a [routerLink]="['/profile']" *ngIf="isLogged">Hi, {{currentUser?.name}}</a>
+        <a [routerLink]="['/login']" *ngIf="!isLogged">Login</a>
+        <button type="button" *ngIf="isLogged" (click)="logout()">Logout</button>
+    </div>
+</header>

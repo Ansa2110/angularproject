@@ -1,0 +1,16 @@
+<div class="bodyauth">
+    <div class="container">
+        <form [formGroup]="loginForm">
+            <h2>Authorization form</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Login" formControlName="login">
+                <input type="password" placeholder="Password" formControlName="password">
+            </div>
+            <button type="button" (click)="enterUser()" [disabled]="!loginForm.valid">Login</button>
+            <a [routerLink]="['/register']">Don't have an account? Register</a>
+            <div class="invalid">
+                <p *ngIf="isVisible">Invalid login or password. Please try again.</p>
+            </div>
+        </form>
+    </div>
+</div>
